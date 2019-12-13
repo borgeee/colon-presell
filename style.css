@@ -22,9 +22,9 @@
   --hover-color: #1eb8ac; /*checkout button*/
   --text-color: #333;     /*content p*/
   --blockquote-color: #333;     
-  --highlight-text: #1dd0c2; 
-  --sectionOne-bg-color: #1dd0c2; /*hts green*/
-  --sectionTwo-bg-color: #f7f8f9; /*lt-gray-bg*/
+  --highlight-text: #1dd0c2; /*hts green*/
+  --sectionOne-bg-color: #dcfcfa; /*lt-green-bg*/
+  --sectionTwo-bg-color: #f6f6f6; /*lt-gray-bg*/
   --sectionThree-bg-color: #e6eaed; /*gray-bg*/
   --price-color: #1dd0c2;
 }
@@ -35,7 +35,7 @@
   font-family: "open sans", sans-serif;
   color: #333333;
   font-weight: 400;
-  margin: 0 0 15px 0;
+  margin: 10px 0 15px 0;
   width: 100%;
 }
 
@@ -49,6 +49,8 @@
   margin-right: 5px;
   font-size: 16px;
 }
+
+#cta-btn-mobile{display: none;}
 
 .hero-title h1 {
   margin-bottom: 10px;
@@ -72,12 +74,16 @@
 }
 
 .content p{
-  font-size: 18px;
+  font-size: 17px;
   padding: 0 8%;
   line-height: 1.6;
   margin-bottom: 25px;
   padding: 0 8%;
   color: var(--text-color);
+}
+
+.content p:last-child{
+  margin-bottom: 0px;
 }
 
 li h3 {color:#333;}
@@ -121,7 +127,8 @@ blockquote {
   color:var(--blockquote-color);
   line-height: 1.6;
   font-weight: normal;
-  text-align: center;
+  text-align: left;
+  padding: 0 8%;
 }
 
 .price-table-content p {
@@ -134,10 +141,12 @@ blockquote {
  .sm-video-content p{ font-size: 14px; display: none;}
 
 /*Layout & Position*/
+
 .align-center{text-align: center !important;}
 
-#main-header-wrapper2 {
+#main-header{
   width: 100%;
+  min-height: 115px;
   border-bottom: 1px solid #e5e5e5;
   background: #fff;
   position: fixed;
@@ -145,13 +154,8 @@ blockquote {
   z-index: 9;
 }
 
-#main-header.container-wrapper {
-  padding: 30px 3%;
-  /*width: 100%;
-  max-width: 1700px;
-  position: relative;
-  margin-bottom: 0;
-  z-index: 99;*/
+#header-container {
+  padding: 10px 50px;
 }
 
 #logo-wrapper {
@@ -190,15 +194,20 @@ blockquote {
 }
 
 .hero{
-  margin: 125px auto 67px auto;
+  margin: 116px auto 67px auto;
   min-height: 325px;
-  width: 80%;
+  width: 100%;
   text-align: center;
 }
+
 
 .content{
   max-width: 940px;
   margin: auto;
+}
+
+.section-0{
+  padding: 30px;
 }
 
 .section-1{
@@ -209,10 +218,14 @@ blockquote {
 .section-2{
   background-color: var(--sectionTwo-bg-color);
   padding: 30px;
-  margin: 25px 0px;
+  /*margin: 25px 0px;*/
 }
 
-.image-1{margin: 50px 0px;}
+.section-3{
+  background-color: var(--sectionThree-bg-color);
+  padding: 30px;
+}
+
 
 .content-title{
   text-align: center;
@@ -240,17 +253,16 @@ li{
   margin-bottom: 20px;
 }
 
-.highlight {color: var(--highlight-text); font-weight: 700;} 
+.highlight-gr {color: var(--highlight-text) !important; font-weight: 700;} 
 
 .highlight-blk{font-weight: 700;color: #333;}
 
 .quote {
   font-weight: 400;
   font-size: 28px;
-  color: color: var(--blockquote-color);
+  color: var(--blockquote-color);
 }
 
-.image-box{margin: 30px 0px;}
 
 .chk-btn-1 {
   min-height: 35px;
@@ -259,14 +271,14 @@ li{
 
 .price-table{
   text-align: center;
-  margin-top: -45px;
+  margin-top: -60px;
   margin-bottom: 50px;
   font-size: 0;
 }
 
 .product-display{
   text-align: center;
-  margin: 50px 0px;
+  margin: 30px 0px;
 }
 
 .product-display-col{
@@ -281,7 +293,7 @@ li{
 .product-table{
   text-align: center;
   /*margin-top: -45px;*/
-  margin: 50px 0px;
+  margin: 0px 0px;
   font-size: 0;
 }
 
@@ -293,18 +305,28 @@ li{
   background-color: #fff;
   box-shadow: 0 0 10px 5px #C4C4C4;
   vertical-align: top;
-  min-height: 455px;
+  min-height: 455px; /*shop 482px;*/
 }
 
 p.price {color: var(--price-color) !important; font-weight: 600;}
 
 /*Images*/
+.image-box{margin: 30px 0px;}
+
+.hero img{width:50%; padding-top: 7%;}
+
+.img-banner img{width: 75%;}
+
+.image-1{margin: 50px 0px;}
+
 #logo img{width: 90px;}
+#ftr-logo img{width: 90px; margin-bottom: 30px;}
 
 .hero{
-  background: url(https://cdn.shopify.com/s/files/1/2300/3895/files/180621-HTSSTR-ColonCleanseBanner-1280x325_1280x.progressive.jpg?v=1529549798);
+  background: url(https://cdn.shopify.com/s/files/1/2300/3895/files/colon-cleanse-hts.png?v=1576203262);
   background-size: cover;
   background-position: center center;
+  vertical-align: middle;
 }
 
 .price-col-img img{
@@ -372,3 +394,74 @@ a {
   font-weight: 400;
   transition: all 0.3s linear;
 } 
+
+/* Mobile View */
+@media only screen and (max-width: 768px) 
+and (min-width: 280px) {
+
+  .page{padding: 0px !important;}
+
+  #header-container{padding: 10px 0px 0px 35px !important; text-align:center; margin: auto; width: 100%}
+
+  #header-cta{width:80%;}
+
+  #cta-title{float:right;}
+
+  #logo{
+    width: 10% !important;
+    text-align: center;
+    float: left;
+  }
+
+  #logo img {
+    width: 70px;
+    padding-top: 14px;
+  }
+
+  #cta-btn-desktop{
+    display: none;
+  }
+
+  #cta-btn-mobile{
+    display: inline-block;
+  }
+
+
+
+
+
+  .hero{
+  min-height: 250px;
+  width: 100%;
+  background-position: left center;
+  }
+
+  .hero img{width:80%; padding-top: 30%;}
+
+  .img-banner img{width: 95%;}
+  .content {
+    width: 100%;
+    margin: auto;
+  }
+
+  .content p{
+    font-size: 17px;
+    padding: 0px 4%;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: var(--text-color);
+  }
+
+  .hero-subtitle h2 {padding: 0px 4%; font-size: 1.2em; margin-top: -20px;}
+
+  .section-0,
+  .section-1,
+  .section-2,
+  .section-3 {
+    padding: 25px 0px !important;
+  }
+
+  blockquote {padding: 0px;}
+
+  .image-1 {margin: 0px;}
+}
