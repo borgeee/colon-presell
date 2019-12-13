@@ -3,6 +3,8 @@
   #shopify-section-static-header,
   #shopify-section-site-footer{display:none !important;}
 
+  .masthead{ display: none; }
+
   body{background-color: #fff !important;}
   .site-main{max-width: none; margin: auto; padding: 0px;}
   .content{width: 80%; margin: auto;}
@@ -194,7 +196,7 @@ blockquote {
 }
 
 .hero{
-  margin: 116px auto 67px auto;
+  margin: 116px auto 67px auto;/*store 115px auto 67px auto*/
   min-height: 325px;
   width: 100%;
   text-align: center;
@@ -305,7 +307,7 @@ li{
   background-color: #fff;
   box-shadow: 0 0 10px 5px #C4C4C4;
   vertical-align: top;
-  min-height: 455px; /*shop 482px;*/
+  min-height: 455px; /*store 482px;*/
 }
 
 p.price {color: var(--price-color) !important; font-weight: 600;}
@@ -401,17 +403,14 @@ and (min-width: 280px) {
 
   .page{padding: 0px !important;}
 
-  #header-container{padding: 10px 0px 0px 35px !important; text-align:center; margin: auto; width: 100%}
-
-  #header-cta{width:80%;}
-
-  #cta-title{float:right;}
+  #header-container{width: 100%; padding: 0px; min-height: 190px;}
 
   #logo{
-    width: 10% !important;
+    width: 100% !important;
     text-align: center;
-    float: left;
   }
+
+  #header-cta{width:100%;}
 
   #logo img {
     width: 70px;
@@ -426,17 +425,20 @@ and (min-width: 280px) {
     display: inline-block;
   }
 
-
-
-
-
-  .hero{
-  min-height: 250px;
+  .hero {
+  min-height: 380px;
   width: 100%;
   background-position: left center;
   }
 
-  .hero img{width:80%; padding-top: 30%;}
+  .hero img{width:85%; padding-top: 50%;}
+  
+  .hero-subtitle h2 {
+    padding: 0px 4%;
+    font-size: 1.2em;
+    margin-top: -12px;
+    text-shadow: none;
+  }
 
   .img-banner img{width: 95%;}
   .content {
@@ -452,7 +454,9 @@ and (min-width: 280px) {
     color: var(--text-color);
   }
 
-  .hero-subtitle h2 {padding: 0px 4%; font-size: 1.2em; margin-top: -20px;}
+  .content-title-blk {
+    padding: 0 4%;
+  }
 
   .section-0,
   .section-1,
