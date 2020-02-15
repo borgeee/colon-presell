@@ -1,3 +1,3 @@
 # colon-presell
 
-view <a href="https://borgeee.github.io/colon-presell/">demo</a>
+view <a target="_blank" href="https://borgeee.github.io/colon-presell/">demo</a>
